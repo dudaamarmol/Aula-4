@@ -1,0 +1,58 @@
+<script>    
+    pacientes = prompt("DIGITE O NÚMERO DE PACIENTES:")
+    pacientes = parseInt(pacientes);
+    for (x = 1; x <= pacientes; x++) 
+    {
+
+        // VAMOS PEDIR UM NOME AO USUARIO:
+        n = prompt("DIGITE SEU NOME:");
+
+        // VAMOS PEDIR A IDADE AO USUARIO:
+        i = prompt("DIGITE SUA IDADE:");
+        i = parseInt(i); //CONVERTER UM NUMERO PARA INTEIRO
+
+        // VAMOS PEDIR O PESO AO USUARIO:
+        p = prompt("DIGITE SEU PESO:");
+        p = parseFloat(p); //CONVERTER UM NUMERO PARA REAL
+
+        // VAMOS PEDIR A ALTURA AO USUARIO:
+        a = prompt("DIGITE SUA ALTURA:");
+        a = parseFloat(a); //CONVERTER UM NUMERO PARA REAL
+
+        imc = p / Math.pow(a, 2); // ou p/a*a
+        if (imc < 18.5) 
+        {
+            console.log(n, i, imc, "ABAIXO DO PESO NORMAL");
+        }
+
+        if (imc >18.5 && imc < 24.9) 
+        {
+            console.log(n, i, imc, "PESO NORMAL");
+
+        }
+        if (imc >25 && imc < 29.9) 
+        {
+            console.log(n, i, imc, "EXCESSO DE PESO");
+        }
+
+        if (imc >30 && imc < 34.9) 
+        {
+            console.log(n, i, imc, "OBESIDADE CLASSE |");
+        }
+
+        if (imc >35 && imc < 39.9) 
+        {
+            console.log(n, i, imc, "OBESIDADE CLASSE ||");
+        }
+
+        if (imc >=40) 
+        {
+            console.log(n, i, imc, "OBESIDADE CLASSE |||");
+        }
+
+
+
+    }
+
+
+</script>
